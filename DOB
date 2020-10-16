@@ -23,5 +23,23 @@ public class practise{
 			m = m*(-1);
 		}
 		System.out.println(y + " years " + m + " months " + c + " days");
+		
+		
+		//Leap year
+				Scanner sc = new Scanner(System.in);
+		int yr = sc.nextInt();
+		if(yr%100==0)
+		{
+			if(yr%400==0)
+			{
+				System.out.println("Leap year");
+			}
+			else System.out.println("Not leap year");
+		}
+		else if(yr%4==0)
+		{
+			System.out.println("Leap year");
+		}
+		else System.out.println("Not a leap year");
     }
     }
