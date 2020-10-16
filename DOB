@@ -1,6 +1,6 @@
 public class practise{
   public static void main(String[] args){
-//birthday
+//1. birthday
 		LocalDate current = LocalDate.now();
 		int cmonth = current.getMonthValue();
 		int cdate = current.getDayOfMonth();
@@ -25,7 +25,7 @@ public class practise{
 		System.out.println(y + " years " + m + " months " + c + " days");
 		
 		
-		//Leap year
+	//2 Leap year
 				Scanner sc = new Scanner(System.in);
 		int yr = sc.nextInt();
 		if(yr%100==0)
@@ -41,5 +41,38 @@ public class practise{
 			System.out.println("Leap year");
 		}
 		else System.out.println("Not a leap year");
+		
+//3 Military time
+		//military time
+		Scanner sc = new Scanner(System.in);
+		String time = sc.next();
+		if(time.contains("AM"))
+		{
+			int s = Integer.parseInt(time.substring(0,2));
+			String a = time.substring(0,time.length()-2);
+			if(s==12)
+			{
+				String[] r = a.split(":");
+				System.out.printf("00" + ":" + r[1] + ":" + r[2]);
+			}
+			else 
+			{
+				System.out.println(a);
+			}
+		}
+		else
+		{
+			String a = time.substring(0,time.length()-2);
+			String[] r = a.split(":");
+			int m = Integer.parseInt(r[0]);
+			if(m==12)
+			{
+		System.out.println(m+ ":" + r[1] + ":" + r[2]);
+			}
+			else
+			{
+				System.out.println(m+12 + ":" + r[1] + ":" + r[2]);
+			}
+		}
     }
     }
