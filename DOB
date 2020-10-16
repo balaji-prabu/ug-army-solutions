@@ -1,0 +1,27 @@
+public class practise{
+  public static void main(String[] args){
+//birthday
+		LocalDate current = LocalDate.now();
+		int cmonth = current.getMonthValue();
+		int cdate = current.getDayOfMonth();
+		int cyear = current.getYear();
+		
+		Scanner sc = new Scanner(System.in);
+		String date = sc.nextLine();
+		String[] s = date.split("-",3);
+		int y = cyear - Integer.parseInt(s[2]);
+		int m = cmonth - Integer.parseInt(s[1]);
+		int c = cdate - Integer.parseInt(s[0]);
+		if(c<0) 
+		{
+			m--;
+			c = c*(-1);
+		}
+		if(m<0)
+		{
+			y--;
+			m = m*(-1);
+		}
+		System.out.println(y + " years " + m + " months " + c + " days");
+    }
+    }
